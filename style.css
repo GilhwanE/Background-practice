@@ -8,27 +8,62 @@
       box-sizing: border-box;
       margin: 0;
   }
-
-  .card-image{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .sr-only{
+      position: absolute;
+      z-index: -100;
       overflow: hidden;
-      width: 300px;
-      height: 200px;
+      opacity: 0;
   }
 
+
+/* Card */
+
+.card{
+    display: flex;
+    width: 800px;
+    padding: 24px;
+
+}
+  .card-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    margin-right: 24px;
+    border-radius: 4px;
+  }
   .card-image img{
       width: 100%;
       height: auto;
   }
+  .card-image   .like-button{
+    position: absolute;
+    top: 12px;
+    left: 12px;  
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    background-image: url(img/icon-favorite.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    cursor: pointer;
+  }
 /* Card-Content */
+.card-content{
+    flex-grow: 1;
+}
 .card-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
 }
-
   .plus-badge{
       display: inline-block;
       padding: 1px 8px;
@@ -38,13 +73,11 @@
       font-size: 14px;
       background-color: #91274d;
   }
-
   .property-type span{
       font-size: 16px;
       line-height: 1.25;
       color: #7d85fd;
   }
-
   .property-rate {
       font-size: 16px;
       line-height: 0.85;
@@ -63,4 +96,21 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
+  }
+  .card-title{
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 16px;
+  }
+  .property-detail{
+      font-size: 14px;
+      color: #7d85fd;
+  }
+  .property-detail dd span::after{
+    content: '.';
+    margin: 0 8px;
+  }
+  .property-detail dd span:last-child::after{
+      content: '';
+      margin: 0;
   }
