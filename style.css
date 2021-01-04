@@ -54,6 +54,10 @@
     background-size: 24px 24px;
     cursor: pointer;
   }
+  .card-image   .like-button:hover{
+      background-color: #91274d;
+  }
+
 /* Card-Content */
 .card-content{
     flex-grow: 1;
