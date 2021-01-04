@@ -23,6 +23,12 @@
       height: auto;
   }
 /* Card-Content */
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
   .plus-badge{
       display: inline-block;
       padding: 1px 8px;
@@ -45,4 +51,16 @@
   }
   .property-rate span{
       color: #7d85fd;
+  }
+  .property-rate::before{
+      content: '';
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url(img/icon-star.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
   }
