@@ -2,15 +2,30 @@
     box-sizing: border-box;
     margin: 0;
 }
-
 button{
-    border-style: none;
+    border: none;
+    background-color: #fff;
 }
-
 .line-button{
+    position: relative;
     font-size: 32px;
     padding: 24px;
+    line-height: 1.25;
     transform: translate(500%,300%);
-    border-bottom: 2px solid #5fdd;
     cursor: pointer;
+    color: #155;
+}
+
+.line-button::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0066FF;
+}
+
+.line-button:hover::after{
+    width: 100%;
 }
