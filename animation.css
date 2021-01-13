@@ -3,15 +3,32 @@
     margin: 0;
 }
 
-section{
+.animation{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(550%);
+    transform: translateY(500%);
 }
-
-
 .loading-title{
-    font-size: 36px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.333;
+    margin-bottom: 12px;
     color: #3f1dcb;
+}
+.progress-bar{
+    position: relative;
+    width: 300px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #E5EAEF;
+}
+.progress-bar-gauge{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 12px;
+    background-color: #3f1dcb;
 }
