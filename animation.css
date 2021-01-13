@@ -16,6 +16,9 @@
     line-height: 1.333;
     margin-bottom: 12px;
     color: #3f1dcb;
+    animation-name: flicker;
+    animation-duration: 1600ms;
+    animation-iteration-count:infinite;
 }
 .progress-bar{
     position: relative;
@@ -23,6 +26,7 @@
     height: 12px;
     border-radius: 100px;
     background-color: #E5EAEF;
+    overflow: hidden;
 }
 .progress-bar-gauge{
     position: absolute;
@@ -30,5 +34,25 @@
     left: 0;
     width: 20px;
     height: 12px;
+    border-radius: 100px;
     background-color: #3f1dcb;
+    animation: all 400ms progress ease-in;
+}
+
+@keyframes progress{
+    from{
+        width: 10%;
+    }
+    to{
+        width: 99%;
+    }
+}
+
+@keyframes flicker{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
