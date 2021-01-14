@@ -36,7 +36,9 @@
     height: 12px;
     border-radius: 100px;
     background-color: #3f1dcb;
-    animation: all 400ms progress ease-in;
+    animation-name: progress;
+    animation-duration: 1600ms;
+    animation-iteration-count:infinite;
 }
 
 @keyframes progress{
@@ -50,9 +52,9 @@
 
 @keyframes flicker{
     from{
-        opacity: 0;
+        opacity: 0.1;
     }
     to{
-        opacity: 1;
+        opacity: 0.9;
     }
 }
